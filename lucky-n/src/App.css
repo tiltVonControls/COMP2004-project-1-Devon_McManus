@@ -1,0 +1,162 @@
+#root {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 1150px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.NavBar {
+  background-color: rgb(76, 43, 226);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  height: 50px;  /* Reduced height for a smaller bar */
+  position: fixed;
+  top: 0;
+  left: 0; /* Stretch to the left edge */
+  right: 0; /* Stretch to the right edge */
+  width: 100%;
+  z-index: 1000;  /* Ensures it stays on top */
+}
+
+.NavTitle {
+  text-align: left;
+  flex: 1;
+}
+
+.NavCart {
+  text-align: right;
+  flex: 0;
+  padding: 0 10px;
+}
+
+.NavCart img {
+  cursor: pointer;
+}
+
+.NavCart span {
+  margin-left: 10px;
+  font-size: 1.2em;
+  color: white;
+}
+
+.GroceriesApp-Container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;  /* Adjust for navbar height */
+}
+
+.CartContainer {
+  width: 25%;
+  justify-content: center;
+  position: fixed;  /* Fixed position for overlay */
+  top: 70px;  /* Below the navbar */
+  right: 0;
+  max-height: calc(100vh - 70px);  /* Ensure it doesn't exceed the viewport height */
+  overflow-y: auto;  /* Add scroll if content exceeds the container height */
+  z-index: 900;  /* Ensure it is below the navbar */
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);  /* Add a shadow for better visibility */
+  border-left: 2px solid #ccc;  /* Optional: a border to differentiate the cart */
+}
+
+.ProductsContainer {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* Center content horizontally */
+  align-items: flex-start;  /* Align items to the top */
+  margin-top: 10%;
+}
+
+.ProductCard {
+  width: 20%;
+  height: 400px;  /* Set a fixed height for uniformity */
+  border: 2px wheat solid;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ProductCard img {
+  width: 100%;
+  height: 150px;  /* Set a fixed height for images */
+  object-fit: cover;  /* Ensures images are proportionally scaled */
+  border-radius: 5px;
+}
+
+.ProductCard h1, .ProductCard p {
+  margin: 5px 0;
+}
+
+.CartCard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px wheat solid;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+  background-color: rgb(43, 48, 54);
+}
+
+.QuantityBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.QuantityBtn:hover {
+  background-color: rgb(76, 43, 226);
+}
+
+img {
+  height: 50px;
+  border-radius: 5px;
+}
+
+.counter-container {
+  display: flex;
+  width: 70%;
+  height: 20px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px auto;
+}
+
+.counter-button {
+  width: 15px;
+  height: 15px;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.CartListBtns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.RemoveButton {
+  background-color: rgb(190, 0, 0);
+}
+
+#BuyButton {
+  background-color: green;
+  width: 50%;
+}
